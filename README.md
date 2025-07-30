@@ -1,6 +1,6 @@
 # Crest Webhooks
 
-A lightweight, production-ready Discord webhook utility library for Minecraft plugin development.
+A lightweight Discord webhook utility library.
 
 ## Features
 
