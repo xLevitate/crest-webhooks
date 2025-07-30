@@ -3,12 +3,10 @@ package com.moocrest.webhook.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import de.exlll.configlib.Configuration;
 import com.moocrest.webhook.builder.WebhookBuilder;
 
 import java.util.List;
 
-@Configuration
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public record WebhookMessage(

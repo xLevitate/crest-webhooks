@@ -2,7 +2,6 @@ package com.moocrest.webhook;
 
 import com.moocrest.webhook.model.WebhookMessage;
 import com.moocrest.webhook.sender.WebhookSender;
-import com.moocrest.webhook.util.WebhookException;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
