@@ -6,7 +6,6 @@ A lightweight, production-ready Discord webhook utility library for Minecraft pl
 
 - ✅ **Builder Pattern**: Fluent API for webhook creation
 - ✅ **Async Support**: CompletableFuture-based asynchronous operations
-- ✅ **ConfigLib Integration**: Full record-based serialization support
 - ✅ **Thread-Safe**: Safe for concurrent usage
 - ✅ **Rate Limiting**: Built-in Discord rate limit handling
 - ✅ **Retry Logic**: Automatic retry with exponential backoff
@@ -61,7 +60,7 @@ com.moocrest.webhook/
 ### Core Components
 
 #### WebhookMessage Record
-Contains all Discord webhook fields with full ConfigLib support:
+Contains all Discord webhook fields:
 - Basic fields: `content`, `username`, `avatarUrl`
 - Embeds support with full Discord specification
 - Thread support via `threadName`
@@ -130,19 +129,6 @@ WebhookSender.sendWebhook(webhookUrl, message, Duration.ofSeconds(30))
     .thenAccept(success -> handleResult(success));
 ```
 
-## Configuration Integration
-
-All record classes work seamlessly with ConfigLib:
-
-```java
-@Configuration
-public record WebhookConfig(
-    String webhookUrl,
-    String defaultUsername,
-    WebhookMessage serverStartMessage
-) {}
-```
-
 ## Built-in Features
 
 ### Rate Limiting
@@ -165,24 +151,10 @@ public record WebhookConfig(
 - Concurrent webhook sending supported
 - Atomic rate limiting implementation
 
-## Dependencies
-
-```kotlin
-dependencies {
-    implementation("com.fasterxml.jackson.core:jackson-core:2.16.1")
-    implementation("com.fasterxml.jackson.core:jackson-databind:2.16.1")
-    implementation("com.fasterxml.jackson.core:jackson-annotations:2.16.1")
-    implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.16.1")
-    implementation("de.exlll:configlib-core:4.5.0")
-    implementation("de.exlll:configlib-yaml:4.5.0")
-}
-```
-
 ## Requirements
 
 - Java 17+
 - Jackson for JSON serialization
-- ConfigLib for configuration management
 - No additional external dependencies
 
 ## Minecraft Plugin Integration

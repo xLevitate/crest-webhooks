@@ -15,9 +15,7 @@ dependencies {
     implementation("com.fasterxml.jackson.core:jackson-databind:2.16.1")
     implementation("com.fasterxml.jackson.core:jackson-annotations:2.16.1")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.16.1")
-    implementation("de.exlll:configlib-core:4.5.0")
-    implementation("de.exlll:configlib-yaml:4.5.0")
-    
+
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
     testImplementation("org.mockito:mockito-core:5.8.0")
 }
